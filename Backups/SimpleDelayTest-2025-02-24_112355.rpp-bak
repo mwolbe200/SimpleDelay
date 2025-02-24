@@ -1,4 +1,4 @@
-<REAPER_PROJECT 0.1 "7.17/win64" 1740398177
+<REAPER_PROJECT 0.1 "6.69/win64" 1740062690
   RIPPLE 0
   GROUPOVERRIDE 0 0 0
   AUTOXFADE 129
@@ -14,13 +14,13 @@
   TIMEMODE 1 5 -1 30 0 0 -1
   VIDEO_CONFIG 0 0 256
   PANMODE 3
-  CURSOR 0
+  CURSOR 8.5
   ZOOM 100 0 0
   VZOOMEX 6 0
   USE_REC_CFG 0
   RECMODE 1
   SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
-  LOOP 0
+  LOOP 1
   LOOPGRAN 0 4
   RECORD_PATH "" ""
   <RECORD_CFG
@@ -62,7 +62,7 @@
   MASTERTRACKHEIGHT 0 0
   MASTERPEAKCOL 16576
   MASTERMUTESOLO 0
-  MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 0 0 0 0 0 -1 -1 0 0
+  MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 0 0 0 0 0 -1 -1 0
   MASTERHWOUT 0 0 1 0 0 0 0 -1
   MASTER_NCH 2 2
   MASTER_VOLUME 1 0 -1 -1 1
@@ -101,7 +101,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 120 0 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 2
     FX 1
@@ -114,9 +114,9 @@
       SHOW 0
       LASTSEL 1
       DOCKED 0
-      BYPASS 1 0 0
+      BYPASS 0 0 0
       <JS analysis/gfxspectrograph ""
-        6 2 -180 0 0 1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        6 2 -180 0 0 1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
       >
       JS_DIMS 640 425
       FLOATPOS 0 0 0 0
@@ -130,18 +130,6 @@
       >
       FLOATPOS 0 0 0 0
       FXID {0553D68E-587F-4AA0-9DAC-9E42A44C78C3}
-      <PARMENV 3:bypass 0 1 0.5 "Bypass / SimpleDelay"
-        EGUID {3DEFA709-DFFE-45B1-8BF2-94CD7BB868CB}
-        ACT 1 -1
-        VIS 1 1 1
-        LANEHEIGHT 0 0
-        ARM 1
-        DEFSHAPE 1 -1 -1
-        PT 0 0 1 0 1
-        PT 0.000001 0 1 0 1
-        PT 10.0005 0 1
-      >
-      PARM_TCP 5:delta
       WAK 0 0
     >
     <ITEM

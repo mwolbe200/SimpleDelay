@@ -1,4 +1,4 @@
-<REAPER_PROJECT 0.1 "7.17/win64" 1740398177
+<REAPER_PROJECT 0.1 "7.17/win64" 1740397147
   RIPPLE 0
   GROUPOVERRIDE 0 0 0
   AUTOXFADE 129
@@ -20,7 +20,7 @@
   USE_REC_CFG 0
   RECMODE 1
   SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
-  LOOP 0
+  LOOP 1
   LOOPGRAN 0 4
   RECORD_PATH "" ""
   <RECORD_CFG
@@ -101,7 +101,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 120 0 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 2
     FX 1
@@ -111,10 +111,10 @@
     MAINSEND 1 0
     <FXCHAIN
       WNDRECT 841 439 627 393
-      SHOW 0
+      SHOW 2
       LASTSEL 1
       DOCKED 0
-      BYPASS 1 0 0
+      BYPASS 0 0 0
       <JS analysis/gfxspectrograph ""
         6 2 -180 0 0 1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       >
@@ -130,18 +130,6 @@
       >
       FLOATPOS 0 0 0 0
       FXID {0553D68E-587F-4AA0-9DAC-9E42A44C78C3}
-      <PARMENV 3:bypass 0 1 0.5 "Bypass / SimpleDelay"
-        EGUID {3DEFA709-DFFE-45B1-8BF2-94CD7BB868CB}
-        ACT 1 -1
-        VIS 1 1 1
-        LANEHEIGHT 0 0
-        ARM 1
-        DEFSHAPE 1 -1 -1
-        PT 0 0 1 0 1
-        PT 0.000001 0 1 0 1
-        PT 10.0005 0 1
-      >
-      PARM_TCP 5:delta
       WAK 0 0
     >
     <ITEM
