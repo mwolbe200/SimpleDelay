@@ -97,7 +97,14 @@ void SimpleDelayAudioProcessor::changeProgramName (int index, const juce::String
 //==============================================================================
 void SimpleDelayAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
+    juce::dsp::ProcessSpec spec;
 
+    spec.sampleRate = sampleRate;
+    spec.maximumBlockSize = samplesPerBlock;
+    spec.numChannels = getTotalNumOutputChannels();
+
+    mDelayLine.reset();
+    mDelayLine.prepare(spec);
 
 }
 
@@ -157,6 +164,13 @@ void SimpleDelayAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, 
     {
         auto* channelData = buffer.getWritePointer (channel);
 
+        for (int i = 0; i < buffer.getNumSamples(); i++)
+        {
+            float in = channelData[i]; //1
+            float temp = mDelayLine.popSample(channel, mDelayTime); //2
+            mDelayLine.pushSample(channel, in + (temp * mFeedback)); //3
+            channelData[i] = (in + temp) * 0.5f; //4
+        }
         // do something to the data...
 
     }
@@ -197,7 +211,13 @@ juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 // Function called when parameter is changed
 void SimpleDelayAudioProcessor::parameterChanged(const juce::String& parameterID, float newValue)
 {
+    if (parameterID == "delayTime")
+    {
+        mDelayTime = newValue;
+    }
 
-
-
+    else if (parameterID == "feedback")
+    {
+        mFeedback = newValue;
+    }
 }
