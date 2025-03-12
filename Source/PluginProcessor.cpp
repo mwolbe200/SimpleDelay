@@ -164,6 +164,9 @@ void SimpleDelayAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, 
     {
         auto* channelData = buffer.getWritePointer (channel);
 
+        auto* channelDataLEFT = buffer.getWritePointer(0);
+        auto* channelDataRIGHT = buffer.getWritePointer(1);
+
         for (int i = 0; i < buffer.getNumSamples(); i++)
         {
             float in = channelData[i]; //1
